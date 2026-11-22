@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#f7f4ee" />
+<meta name="description" content="FORMA user journeys, information architecture and low-fidelity wireframes for a complete e-commerce app." />
+<title>FORMA — Journeys &amp; Wireframes</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d1a16'/%3E%3Cpath d='M16 18h32M16 32h32M16 46h20' stroke='%23f7f4ee' stroke-width='3'/%3E%3Ccircle cx='45' cy='46' r='5' fill='%23b45c39'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="journeys.css" />
+</head>
+<body>
+<div class="doc">
+  <header class="doc-head">
+    <a class="brand" href="index.html"><span class="brand-mark">F</span><span><b>FORMA</b><small>Considered objects</small></span></a>
+    <nav aria-label="Documentation pages">
+      <a href="index.html">Prototype</a>
+      <a class="is-active" href="journeys.html">Journeys</a>
+      <a href="case-study.html">Case study</a>
+    </nav>
+  </header>
+
+  <section class="doc-intro">
+    <p class="eyebrow"><span></span>Step 01 · Research &amp; structure</p>
+    <h1>From intent<br /><em>to ownership.</em></h1>
+    <p class="lede">Before pixels, I mapped what a shopper actually needs at each moment: enough confidence to choose, enough control to adjust, and no surprises at the check-out. These journeys and wireframes are the blueprint for the interactive prototype.</p>
+    <div class="intro-tags"><span>UX research</span><span>User-centred design</span><span>Journey mapping</span><span>Low-fidelity wireframes</span></div>
+  </section>
+
+  <main>
+    <!-- Research snapshot -->
+    <section class="doc-section" id="research">
+      <div class="section-heading"><span class="section-no">01</span><div><h2>Research snapshot</h2><p>A focused, assumption-light brief based on common e-commerce friction points and a primary shopper profile.</p></div></div>
+      <div class="research-grid">
+        <article class="persona-card">
+          <div class="persona-top"><span class="persona-avatar">AK</span><div><h3>Ananya — the considered buyer</h3><p>28 · Designer · Jaipur · Shops on mobile after work</p></div></div>
+          <blockquote>“I know roughly what I want. Help me compare quickly, then let me check out without hunting for the details.”</blockquote>
+          <div class="persona-facts">
+            <div><b>Goal</b><span>Find a few well-made pieces for a new home.</span></div>
+            <div><b>Behaviour</b><span>Saves first, buys after a second visit.</span></div>
+            <div><b>Constraint</b><span>Limited time; cautious about delivery and returns.</span></div>
+          </div>
+        </article>
+        <article class="finding-card">
+          <h3>Friction → design response</h3>
+          <div class="finding"><span class="friction">Too many near-identical products</span><span class="arrow">→</span><span class="response">Five clear categories, chips, sort and a focused filter sheet.</span></div>
+          <div class="finding"><span class="friction">Costs revealed too late</span><span class="arrow">→</span><span class="response">Delivery threshold and running total visible in the bag and both checkout steps.</span></div>
+          <div class="finding"><span class="friction">Uncertain commitment</span><span class="arrow">→</span><span class="response">Save for later, reorder from history, and a low-risk 14-day return note.</span></div>
+          <div class="finding"><span class="friction">Form fatigue</span><span class="arrow">→</span><span class="response">Prefilled demo address, inline validation and card/UPI choice.</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Journey 1 -->
+    <section class="doc-section" id="journey-shop">
+      <div class="section-heading"><span class="section-no">02</span><div><h2>Journey 01 · Shop a new arrival</h2><p>A discovery-led path from the home screen to a confirmed order.</p></div></div>
+      <div class="journey-strip"><span>Discover</span><i></i><span>Browse</span><i></i><span>Evaluate</span><i></i><span>Bag</span><i></i><span>Delivery</span><i></i><span>Pay</span><i></i><span>Confirm</span></div>
+      <div class="journey-table" role="table" aria-label="Shop a new arrival journey map">
+        <div class="journey-row journey-head" role="row"><div>Stage</div><div>User action</div><div>Thought / emotion</div><div>Touchpoint</div><div>Design opportunity</div></div>
+        <div class="journey-row" role="row"><div><b>01 Discover</b><small>Home</small></div><p>Opens the app, scans the hero and category tiles.</p><p>“Show me what feels current.” <em>Curious</em></p><p>Hero card, categories, picked for you</p><p>Editorial hero sets context; category art makes scanning fast.</p></div>
+        <div class="journey-row" role="row"><div><b>02 Browse</b><small>Listing</small></div><p>Filters to Ceramics, sorts by top rated, scans cards.</p><p>“Which one fits my shelf?” <em>Comparing</em></p><p>Chips, sort, filter sheet, product grid</p><p>Keep the count and active filters visible; never lose the result set.</p></div>
+        <div class="journey-row" role="row"><div><b>03 Evaluate</b><small>Detail</small></div><p>Opens a vase, swipes gallery, chooses a finish and quantity.</p><p>“I can picture it.” <em>Convincing</em></p><p>Gallery, variants, specs, delivery note</p><p>Put material, dimensions and care in one scannable spec list.</p></div>
+        <div class="journey-row" role="row"><div><b>04 Bag</b><small>Bag</small></div><p>Adds to bag, applies FORMA10, checks shipping progress.</p><p>“That’s a fair total.” <em>Reassured</em></p><p>Line items, promo, totals, free-ship bar</p><p>Show small-order economics before checkout, not after.</p></div>
+        <div class="journey-row" role="row"><div><b>05 Deliver</b><small>Delivery</small></div><p>Confirms address and selects standard or express.</p><p>“I know when it arrives.” <em>In control</em></p><p>Address form, speed selector, summary</p><p>Inline validation with plain-language errors and a persistent summary.</p></div>
+        <div class="journey-row" role="row"><div><b>06 Pay</b><small>Payment</small></div><p>Chooses card or UPI, reviews the final total, places order.</p><p>“No hidden charge.” <em>Confident</em></p><p>Payment method, summary, place order</p><p>Prototype disclaimer and totals repeated at the point of commitment.</p></div>
+        <div class="journey-row" role="row"><div><b>07 Confirm</b><small>Order confirmed</small></div><p>Reads the order ID and arrival estimate; opens tracking.</p><p>“I can relax now.” <em>Satisfied</em></p><p>Success screen, order detail</p><p>Give a clear next action instead of a dead-end thank-you page.</p></div>
+      </div>
+    </section>
+
+    <!-- Journey 2 -->
+    <section class="doc-section" id="journey-save">
+      <div class="section-heading"><span class="section-no">03</span><div><h2>Journey 02 · Search &amp; save</h2><p>For the shopper who is not ready to buy today but wants to return with intent.</p></div></div>
+      <div class="split-flow">
+        <div class="flow-card">
+          <h3>Search</h3>
+          <div class="flow-line"><span>Recent + trending</span><i></i><span>Live results</span><i></i><span>Product detail</span></div>
+          <p>Type “linen” or “vase”. Results update as you type; recents are remembered for the next visit.</p>
+        </div>
+        <div class="flow-card">
+          <h3>Save</h3>
+          <div class="flow-line"><span>Heart icon</span><i></i><span>Saved tab</span><i></i><span>Move to bag</span></div>
+          <p>Saving is reversible and non-committal. The Saved tab becomes a shortlist, not a second catalogue.</p>
+        </div>
+      </div>
+      <div class="moment-grid">
+        <article><span class="moment-no">01</span><h4>Enter with a hint</h4><p>Trending terms reduce the blank-page problem and teach the vocabulary of the catalogue.</p></article>
+        <article><span class="moment-no">02</span><h4>See relevant results</h4><p>Search covers names, categories, materials and tags — not just product titles.</p></article>
+        <article><span class="moment-no">03</span><h4>Save without friction</h4><p>One tap from a card or detail screen; a toast confirms the action.</p></article>
+        <article><span class="moment-no">04</span><h4>Return with intent</h4><p>Saved items persist across reloads and can be moved to the bag in one tap.</p></article>
+      </div>
+    </section>
+
+    <!-- Journey 3 -->
+    <section class="doc-section" id="journey-reorder">
+      <div class="section-heading"><span class="section-no">04</span><div><h2>Journey 03 · Reorder a favourite</h2><p>The fastest repeat purchase: recognised needs, no rediscovery.</p></div></div>
+      <div class="reorder-flow">
+        <div class="reorder-step"><span>01</span><b>Account</b><small>Recognise the shopper</small></div><i></i>
+        <div class="reorder-step"><span>02</span><b>Your orders</b><small>Scan past purchases</small></div><i></i>
+        <div class="reorder-step"><span>03</span><b>Order detail</b><small>Verify items &amp; status</small></div><i></i>
+        <div class="reorder-step"><span>04</span><b>Reorder</b><small>Refill the bag</small></div><i></i>
+        <div class="reorder-step is-end"><span>✓</span><b>Bag</b><small>Adjust or checkout</small></div>
+      </div>
+      <div class="callout"><b>Why this matters</b><p>Reorder removes search, comparison and decision cost. It is the clearest expression of a user-centred e-commerce experience: the system remembers what the person already trusts.</p></div>
+    </section>
+
+    <!-- IA -->
+    <section class="doc-section" id="ia">
+      <div class="section-heading"><span class="section-no">05</span><div><h2>Information architecture</h2><p>Five primary destinations, with checkout as a focused two-step branch off the bag.</p></div></div>
+      <div class="ia-map">
+        <div class="ia-root">FORMA app</div>
+        <div class="ia-branches">
+          <div class="ia-branch"><b>Discover</b><span>Hero edit · Categories · Picks · New in</span></div>
+          <div class="ia-branch"><b>Shop</b><span>Search · Filters · Sort · Product detail</span></div>
+          <div class="ia-branch"><b>Bag</b><span>Promo · Totals → Delivery → Payment → Confirmation</span></div>
+          <div class="ia-branch"><b>Saved</b><span>Shortlist · Move to bag</span></div>
+          <div class="ia-branch"><b>Account</b><span>Orders · Order detail · Reorder</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wireframes -->
+    <section class="doc-section" id="wireframes">
+      <div class="section-heading"><span class="section-no">06</span><div><h2>Low-fidelity wireframes</h2><p>Structure before style. These six frames established hierarchy, spacing and the placement of primary actions.</p></div></div>
+      <div class="wire-grid">
+        <figure class="wire-frame">
+          <figcaption><span>WF-01</span>Discover</figcaption>
+          <div class="wire">
+            <div class="wire-status"><i></i><span></span></div>
+            <div class="wire-greeting"><b></b><span></span></div>
+            <div class="wire-search"></div>
+            <div class="wire-hero"><span></span></div>
+            <div class="wire-label"></div>
+            <div class="wire-row"><i></i><i></i><i></i></div>
+            <div class="wire-label"></div>
+            <div class="wire-row wire-row--cards"><i></i><i></i></div>
+            <div class="wire-tab"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </figure>
+        <figure class="wire-frame">
+          <figcaption><span>WF-02</span>Listing</figcaption>
+          <div class="wire">
+            <div class="wire-status"><i></i><span></span></div>
+            <div class="wire-title"><b></b><i></i></div>
+            <div class="wire-search"></div>
+            <div class="wire-row wire-row--chips"><i></i><i></i><i></i><i></i></div>
+            <div class="wire-meta"><span></span><span></span></div>
+            <div class="wire-grid-mini"><i></i><i></i><i></i><i></i></div>
+            <div class="wire-tab"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </figure>
+        <figure class="wire-frame">
+          <figcaption><span>WF-03</span>Product detail</figcaption>
+          <div class="wire">
+            <div class="wire-status"><i></i><span></span></div>
+            <div class="wire-image"><span></span></div>
+            <div class="wire-label"></div>
+            <div class="wire-title-line"><b></b><span></span></div>
+            <div class="wire-copy"><i></i><i></i></div>
+            <div class="wire-row wire-row--pills"><i></i><i></i><i></i></div>
+            <div class="wire-row wire-row--specs"><i></i><i></i></div>
+            <div class="wire-cta"><i></i><i></i></div>
+          </div>
+        </figure>
+        <figure class="wire-frame">
+          <figcaption><span>WF-04</span>Bag</figcaption>
+          <div class="wire">
+            <div class="wire-status"><i></i><span></span></div>
+            <div class="wire-title"><b></b><i></i></div>
+            <div class="wire-progress"><span></span><i></i></div>
+            <div class="wire-line"><i></i><span><b></b><em></em></span></div>
+            <div class="wire-line"><i></i><span><b></b><em></em></span></div>
+            <div class="wire-search wire-search--promo"></div>
+            <div class="wire-totals"><i></i><i></i><i></i></div>
+            <div class="wire-cta"><i></i></div>
+          </div>
+        </figure>
+        <figure class="wire-frame">
+          <figcaption><span>WF-05</span>Delivery</figcaption>
+          <div class="wire">
+            <div class="wire-status"><i></i><span></span></div>
+            <div class="wire-title"><i></i><b></b></div>
+            <div class="wire-label"></div>
+            <div class="wire-fields"><i></i><i></i><i></i></div>
+            <div class="wire-label"></div>
+            <div class="wire-row wire-row--options"><i></i><i></i></div>
+            <div class="wire-summary"><i></i><i></i><i></i></div>
+            <div class="wire-cta"><i></i></div>
+          </div>
+        </figure>
+        <figure class="wire-frame">
+          <figcaption><span>WF-06</span>Confirmation</figcaption>
+          <div class="wire wire--center">
+            <div class="wire-status"><i></i><span></span></div>
+            <div class="wire-success"></div>
+            <div class="wire-label wire-label--wide"></div>
+            <div class="wire-title-line wire-title-line--center"><b></b></div>
+            <div class="wire-copy wire-copy--center"><i></i><i></i></div>
+            <div class="wire-summary"><i></i><i></i><i></i></div>
+            <div class="wire-cta"><i></i></div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Inventory -->
+    <section class="doc-section" id="inventory">
+      <div class="section-heading"><span class="section-no">07</span><div><h2>Screen inventory</h2><p>Twelve screens in the prototype; each has a single job and a clear next action.</p></div></div>
+      <div class="inventory-table">
+        <div class="inv-row inv-head"><div>#</div><div>Screen</div><div>Primary job</div><div>Key action</div></div>
+        <div class="inv-row"><div>01</div><div>Discover</div><div>Set context and surface entry points</div><div>Open hero or category</div></div>
+        <div class="inv-row"><div>02</div><div>Shop / listing</div><div>Compare the catalogue</div><div>Filter, sort, open product</div></div>
+        <div class="inv-row"><div>03</div><div>Search</div><div>Find by name, material or intent</div><div>Open live result</div></div>
+        <div class="inv-row"><div>04</div><div>Product detail</div><div>Build confidence in one object</div><div>Choose variant and add to bag</div></div>
+        <div class="inv-row"><div>05</div><div>Bag</div><div>Review selection and economics</div><div>Apply promo, checkout</div></div>
+        <div class="inv-row"><div>06</div><div>Delivery</div><div>Collect address and speed</div><div>Continue to payment</div></div>
+        <div class="inv-row"><div>07</div><div>Payment</div><div>Collect payment choice safely</div><div>Place order</div></div>
+        <div class="inv-row"><div>08</div><div>Order confirmed</div><div>Close the loop with next steps</div><div>Track order</div></div>
+        <div class="inv-row"><div>09</div><div>Account</div><div>Recognise the shopper</div><div>Open orders or saved</div></div>
+        <div class="inv-row"><div>10</div><div>Your orders</div><div>Scan purchase history</div><div>Open an order</div></div>
+        <div class="inv-row"><div>11</div><div>Order detail</div><div>Verify items and status</div><div>Reorder</div></div>
+        <div class="inv-row"><div>12</div><div>Saved items</div><div>Return to a shortlist</div><div>Move to bag</div></div>
+      </div>
+    </section>
+
+    <!-- Components -->
+    <section class="doc-section" id="components">
+      <div class="section-heading"><span class="section-no">08</span><div><h2>Reusable component library</h2><p>A small set of consistent parts keeps twelve screens feeling like one product.</p></div></div>
+      <div class="component-grid">
+        <article><h3>Buttons</h3><div class="demo-row"><span class="demo-btn">Primary action</span><span class="demo-btn demo-btn--ghost">Secondary</span><span class="demo-btn demo-btn--text">Text link</span></div><p>One primary action per screen; pill shape; 44px minimum height.</p></article>
+        <article><h3>Chips</h3><div class="demo-row"><span class="demo-chip is-on">All</span><span class="demo-chip">Ceramics</span><span class="demo-chip">Lighting</span></div><p>Filters are compact, scrollable and reversible.</p></article>
+        <article><h3>Product card</h3><div class="demo-card"><div class="demo-card-img"></div><b>Arc Ceramic Vase</b><span>Ceramics · ₹3,499</span></div><p>Image first, category and rating second, price last.</p></article>
+        <article><h3>Form field</h3><div class="demo-field"><label>Full name</label><input value="Ananya Kapoor" readonly /></div><p>Labels sit above; errors appear directly beneath the field.</p></article>
+        <article><h3>Tab bar</h3><div class="demo-tab"><span>⌂</span><span>▦</span><span>♡</span><span>▢</span><span>◯</span></div><p>Five destinations always available; active state uses weight and colour.</p></article>
+        <article><h3>Bottom sheet</h3><div class="demo-sheet"><i></i><b>Refine the collection</b><span>Price · Rating · Availability</span></div><p>Filters live in a sheet so the product grid stays in view.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="doc-foot"><span>FORMA · Step 01 documentation</span><a href="case-study.html">Continue to the case study →</a></footer>
+</div>
+</body>
+</html>

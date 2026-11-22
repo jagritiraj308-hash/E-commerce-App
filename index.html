@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#f7f4ee" />
+<meta name="description" content="FORMA — an interactive e-commerce app prototype for considered home objects. Product catalog, cart, checkout and account journeys." />
+<meta property="og:title" content="FORMA — E-Commerce App Prototype" />
+<meta property="og:description" content="A complete, tested e-commerce experience: 12 high-fidelity screens and three guided shopping journeys." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/screens/01-home.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<title>FORMA — E-Commerce App Prototype</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d1a16'/%3E%3Cpath d='M16 18h32M16 32h32M16 46h20' stroke='%23f7f4ee' stroke-width='3'/%3E%3Ccircle cx='45' cy='46' r='5' fill='%23b45c39'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://images.pexels.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.7 12 3l9 7.7V21a1 1 0 0 1-1 1h-5.5v-7h-5v7H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 7h16M7 12h10M10 17h4"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 19l-7-7 7-7"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.2l5.9-.9z"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v11H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.4 7.8-8 9-4.6-1.2-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14M10 11v6M14 11v6"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-sort" viewBox="0 0 24 24"><path d="M7 4v16M3 16l4 4 4-4M17 20V4M13 8l4-4 4 4"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+</svg>
+
+<div class="page">
+  <header class="site-head">
+    <a class="brand" href="index.html" aria-label="FORMA prototype home">
+      <span class="brand-mark" aria-hidden="true">F</span>
+      <span class="brand-text"><b>FORMA</b><span>Considered objects</span></span>
+    </a>
+    <nav class="top-nav" aria-label="Prototype links">
+      <a href="journeys.html">Journeys</a>
+      <a href="case-study.html">Case study</a>
+      <a href="#design-system">Design system</a>
+      <button class="reset-btn" id="resetPrototype" type="button">Reset prototype</button>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <div class="intro-copy">
+      <p class="eyebrow"><span></span>Task 05 — E-commerce App UI/UX</p>
+      <h1>A shop that gets<br /><em>out of the way.</em></h1>
+      <p class="lede">A high-fidelity, interactive e-commerce prototype for considered home objects. Browse a catalogue, find the right piece, build a bag and move through a checkout that never surprises you.</p>
+    </div>
+    <div class="intro-meta" aria-label="Prototype summary">
+      <div><strong>12</strong><span>High-fidelity screens</span></div>
+      <div><strong>03</strong><span>Guided journeys</span></div>
+      <div><strong>16</strong><span>Products · 5 categories</span></div>
+      <div><strong>390 × 844</strong><span>Mobile canvas</span></div>
+    </div>
+  </section>
+
+  <main class="stage">
+    <aside class="rail rail-left" aria-label="Guided journeys">
+      <div class="rail-head"><p class="micro">Guided journeys</p><span>03</span></div>
+      <p class="rail-note">Start a journey, then use the app. The coach above the phone tracks each step.</p>
+      <div class="journey-list" id="journeyList">
+        <button class="journey-card" data-journey="shop" type="button">
+          <span class="journey-no">01</span>
+          <span class="journey-body"><b>Shop a new arrival</b><small>Browse → detail → bag → delivery → payment</small></span>
+          <span class="journey-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+        </button>
+        <button class="journey-card" data-journey="save" type="button">
+          <span class="journey-no">02</span>
+          <span class="journey-body"><b>Search &amp; save</b><small>Search → open → save → move to bag</small></span>
+          <span class="journey-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+        </button>
+        <button class="journey-card" data-journey="reorder" type="button">
+          <span class="journey-no">03</span>
+          <span class="journey-body"><b>Reorder a favourite</b><small>Account → orders → order detail → reorder</small></span>
+          <span class="journey-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+        </button>
+      </div>
+      <div class="rail-card rail-tip">
+        <p class="micro">Try this</p>
+        <p>Apply <b>FORMA10</b> in the bag for 10% off, then switch the delivery speed to see the total update.</p>
+      </div>
+    </aside>
+
+    <div class="phone-stage">
+      <div class="coach" id="coach" hidden>
+        <span class="coach-step" id="coachStep">01</span>
+        <span class="coach-text"><b id="coachTitle">Shop a new arrival</b><span id="coachHint">Open the collection and choose a category.</span></span>
+        <button class="coach-close" id="coachClose" type="button" aria-label="Exit journey"><svg class="icon"><use href="#i-close" /></svg></button>
+      </div>
+      <div class="phone" id="phone">
+        <div class="phone-screen">
+          <div class="dynamic-island" aria-hidden="true"></div>
+          <div class="status-bar" aria-hidden="true">
+            <span class="status-time">9:41</span>
+            <span class="status-icons">
+              <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 9h2v2H1zM5 6h2v5H5zM9 3h2v8H9zM13 0h2v11h-2z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 10.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM8 6.5c1.5 0 2.8.6 3.8 1.5l-1.1 1.1A4 4 0 0 0 8 8a4 4 0 0 0-2.7 1.1L4.2 8C5.2 7.1 6.5 6.5 8 6.5zM8 2.5c2.6 0 5 1 6.7 2.7l-1.1 1.1A7.9 7.9 0 0 0 8 4a7.9 7.9 0 0 0-5.6 2.3L1.3 5.2A9.4 9.4 0 0 1 8 2.5z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 26 12" aria-hidden="true"><rect x="1" y="1" width="21" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.2"/><rect x="3" y="3" width="15" height="6" rx="1" fill="currentColor"/><path d="M24 4v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+
+          <div class="app" id="app">
+            <!-- ================= HOME ================= -->
+            <section class="screen is-active" id="screen-home" data-screen="home" aria-label="Discover" tabindex="-1">
+              <div class="screen-body home-body">
+                <header class="home-head">
+                  <div>
+                    <p class="micro" id="todayLabel">Sunday, 22 November</p>
+                    <h1 class="app-title">Good morning,<br /><em>make it yours.</em></h1>
+                  </div>
+                  <button class="avatar" type="button" data-goto="account" aria-label="Open account">AK<span class="online-dot"></span></button>
+                </header>
+                <button class="search-bar" type="button" data-open-search aria-label="Search the catalogue">
+                  <svg class="icon"><use href="#i-search" /></svg>
+                  <span>Search objects, materials, rooms</span>
+                  <kbd>⌘ K</kbd>
+                </button>
+                <article class="hero-card" data-open-product="arc-vase" role="button" tabindex="0" aria-label="Shop the autumn edit">
+                  <img src="https://images.pexels.com/photos/31846007/pexels-photo-31846007.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Minimalist ceramic vases and dried flowers on a textured table" />
+                  <div class="hero-shade"></div>
+                  <div class="hero-content">
+                    <span class="pill pill--glass">The autumn edit</span>
+                    <h2>Quiet objects,<br />considered living.</h2>
+                    <p>Hand-finished pieces for the rooms you use most.</p>
+                    <span class="hero-cta">Shop the edit <svg class="icon"><use href="#i-arrow-right" /></svg></span>
+                  </div>
+                </article>
+                <div class="section-row"><h2 class="section-title">Shop by category</h2><button class="text-link" type="button" data-goto="listing">View all</button></div>
+                <div class="category-row" id="categoryRow"></div>
+                <div class="section-row"><h2 class="section-title">Picked for you</h2><span class="micro">Updated today</span></div>
+                <div class="product-rail" id="featuredRow"></div>
+                <div class="section-row"><h2 class="section-title">New in</h2><button class="text-link" type="button" data-goto="listing">See all</button></div>
+                <div class="product-grid" id="newGrid"></div>
+                <article class="promo-card">
+                  <span class="micro">A little welcome</span>
+                  <h3>10% off your first order</h3>
+                  <p>Use code <b>FORMA10</b> at the bag. Thoughtful pieces, a little easier to bring home.</p>
+                  <button class="btn btn--solid btn--sm" type="button" data-goto="listing">Start browsing <svg class="icon"><use href="#i-arrow-right" /></svg></button>
+                </article>
+              </div>
+              <nav class="tabbar" data-tabbar aria-label="Primary"></nav>
+            </section>
+
+            <!-- ================= LISTING ================= -->
+            <section class="screen" id="screen-listing" data-screen="listing" aria-label="Shop the collection" tabindex="-1">
+              <header class="screen-head">
+                <div><p class="micro">The collection</p><h1 class="screen-title" id="listingTitle">All objects</h1></div>
+                <button class="icon-btn" type="button" id="openFilters" aria-label="Filter products"><svg class="icon"><use href="#i-filter" /></svg></button>
+              </header>
+              <div class="screen-body">
+                <div class="listing-tools">
+                  <div class="explore-search">
+                    <svg class="icon"><use href="#i-search" /></svg>
+                    <input id="listingSearch" type="search" placeholder="Search within the collection" autocomplete="off" aria-label="Search the collection" />
+                    <button class="clear-input" id="clearListingSearch" type="button" aria-label="Clear search" hidden><svg class="icon"><use href="#i-close" /></svg></button>
+                  </div>
+                  <div class="chip-row" id="categoryChips" role="group" aria-label="Filter by category"></div>
+                  <div class="listing-meta"><span id="listingCount">16 objects</span><button class="text-link" type="button" id="sortBtn"><svg class="icon"><use href="#i-sort" /></svg><span id="sortLabel">Featured</span></button></div>
+                </div>
+                <div class="product-grid" id="listingGrid"></div>
+              </div>
+              <nav class="tabbar" data-tabbar aria-label="Primary"></nav>
+            </section>
+
+            <!-- ================= SEARCH ================= -->
+            <section class="screen" id="screen-search" data-screen="search" aria-label="Search" tabindex="-1">
+              <header class="search-head">
+                <button class="icon-btn" type="button" data-back aria-label="Back"><svg class="icon"><use href="#i-arrow-left" /></svg></button>
+                <div class="search-field">
+                  <svg class="icon"><use href="#i-search" /></svg>
+                  <input id="searchInput" type="search" placeholder="Search objects, materials, rooms" autocomplete="off" aria-label="Search products" />
+                  <button class="clear-input" id="clearSearch" type="button" aria-label="Clear search" hidden><svg class="icon"><use href="#i-close" /></svg></button>
+                </div>
+              </header>
+              <div class="screen-body" id="searchBody"></div>
+            </section>
+
+            <!-- ================= PRODUCT ================= -->
+            <section class="screen" id="screen-product" data-screen="product" aria-label="Product detail" tabindex="-1">
+              <header class="screen-head screen-head--overlay">
+                <button class="icon-btn icon-btn--glass" type="button" data-back aria-label="Back"><svg class="icon"><use href="#i-arrow-left" /></svg></button>
+                <div class="head-spacer"></div>
+                <button class="icon-btn icon-btn--glass" type="button" data-share="product" aria-label="Share product"><svg class="icon"><use href="#i-share" /></svg></button>
+                <button class="icon-btn icon-btn--glass" type="button" id="productSave" aria-label="Save product"><svg class="icon"><use href="#i-heart" /></svg></button>
+              </header>
+              <div class="screen-body product-body" id="productBody"></div>
+              <div class="cta-bar" id="productCta"></div>
+            </section>
+
+            <!-- ================= BAG ================= -->
+            <section class="screen" id="screen-cart" data-screen="cart" aria-label="Shopping bag" tabindex="-1">
+              <header class="screen-head">
+                <div><p class="micro">Your selection</p><h1 class="screen-title">Bag <span class="count-badge" id="cartCountHead">2</span></h1></div>
+                <button class="icon-btn" type="button" data-goto="listing" aria-label="Continue shopping"><svg class="icon"><use href="#i-plus" /></svg></button>
+              </header>
+              <div class="screen-body" id="cartBody"></div>
+              <div class="cta-bar" id="cartCta"></div>
+              <nav class="tabbar" data-tabbar aria-label="Primary"></nav>
+            </section>
+
+            <!-- ================= CHECKOUT / DELIVERY ================= -->
+            <section class="screen" id="screen-checkout" data-screen="checkout" aria-label="Delivery details" tabindex="-1">
+              <header class="screen-head">
+                <button class="icon-btn" type="button" data-back aria-label="Back"><svg class="icon"><use href="#i-arrow-left" /></svg></button>
+                <div><p class="micro">Checkout · Step 1 of 2</p><h1 class="screen-title">Delivery</h1></div>
+              </header>
+              <div class="screen-body" id="checkoutBody">
+                <form id="addressForm" novalidate>
+                  <div class="section-row"><h2 class="section-title">Where should it go?</h2><span class="micro">India</span></div>
+                  <div class="field"><label for="adName">Full name</label><input id="adName" name="name" type="text" placeholder="Ananya Kapoor" autocomplete="name" required /></div>
+                  <div class="field"><label for="adPhone">Phone number</label><input id="adPhone" name="phone" type="tel" inputmode="numeric" placeholder="98765 43210" autocomplete="tel" required /></div>
+                  <div class="field"><label for="adLine">Address</label><input id="adLine" name="line" type="text" placeholder="Flat, building, street" autocomplete="street-address" required /></div>
+                  <div class="field-row">
+                    <div class="field"><label for="adCity">City</label><input id="adCity" name="city" type="text" placeholder="Jaipur" autocomplete="address-level2" required /></div>
+                    <div class="field"><label for="adPin">PIN code</label><input id="adPin" name="pin" type="text" inputmode="numeric" maxlength="6" placeholder="302006" autocomplete="postal-code" required /></div>
+                  </div>
+                  <div class="field"><label for="adNotes">Delivery note <span>(optional)</span></label><input id="adNotes" name="notes" type="text" placeholder="Leave with the door attendant" /></div>
+                </form>
+                <div class="section-row"><h2 class="section-title">Delivery speed</h2><span class="micro">Free over ₹4,999</span></div>
+                <div class="shipping-list" id="shippingList"></div>
+                <div class="section-row"><h2 class="section-title">Order summary</h2></div>
+                <div class="summary-card" id="checkoutSummary"></div>
+              </div>
+              <div class="cta-bar"><button class="btn btn--solid btn--wide" type="submit" form="addressForm">Continue to payment <svg class="icon"><use href="#i-arrow-right" /></svg></button></div>
+            </section>
+
+            <!-- ================= PAYMENT ================= -->
+            <section class="screen" id="screen-payment" data-screen="payment" aria-label="Payment" tabindex="-1">
+              <header class="screen-head">
+                <button class="icon-btn" type="button" data-back aria-label="Back"><svg class="icon"><use href="#i-arrow-left" /></svg></button>
+                <div><p class="micro">Checkout · Step 2 of 2</p><h1 class="screen-title">Payment</h1></div>
+              </header>
+              <div class="screen-body" id="paymentBody">
+                <div class="trust-row"><svg class="icon"><use href="#i-shield" /></svg><span>Your payment details are encrypted. This is a prototype — no real charge is made.</span></div>
+                <div class="segmented" id="paymentMethod" role="group" aria-label="Payment method">
+                  <button type="button" data-method="card" class="is-active"><svg class="icon"><use href="#i-card" /></svg>Card</button>
+                  <button type="button" data-method="upi"><svg class="icon"><use href="#i-sparkle" /></svg>UPI</button>
+                </div>
+                <form id="paymentForm" novalidate>
+                  <div id="cardFields">
+                    <div class="field"><label for="payNumber">Card number</label><input id="payNumber" name="number" type="text" inputmode="numeric" maxlength="19" placeholder="4242 4242 4242 4242" autocomplete="cc-number" required /></div>
+                    <div class="field-row">
+                      <div class="field"><label for="payExpiry">Expiry</label><input id="payExpiry" name="expiry" type="text" inputmode="numeric" maxlength="5" placeholder="MM/YY" autocomplete="cc-exp" required /></div>
+                      <div class="field"><label for="payCvv">CVV</label><input id="payCvv" name="cvv" type="text" inputmode="numeric" maxlength="3" placeholder="•••" autocomplete="cc-csc" required /></div>
+                    </div>
+                    <div class="field"><label for="payName">Name on card</label><input id="payName" name="cardname" type="text" placeholder="Ananya Kapoor" autocomplete="cc-name" required /></div>
+                  </div>
+                  <div id="upiFields" hidden>
+                    <div class="field"><label for="payUpi">UPI ID</label><input id="payUpi" name="upi" type="text" placeholder="name@upi" autocomplete="off" /></div>
+                    <p class="consult-note">Approve the request in your UPI app to complete the order.</p>
+                  </div>
+                  <label class="check-row"><input type="checkbox" id="billingSame" checked /> <span>Billing address is the same as delivery</span></label>
+                </form>
+                <div class="section-row"><h2 class="section-title">Order summary</h2></div>
+                <div class="summary-card" id="paymentSummary"></div>
+              </div>
+              <div class="cta-bar"><button class="btn btn--solid btn--wide" type="submit" form="paymentForm" id="payBtn">Place order</button></div>
+            </section>
+
+            <!-- ================= CONFIRMATION ================= -->
+            <section class="screen" id="screen-confirmation" data-screen="confirmation" aria-label="Order confirmed" tabindex="-1">
+              <div class="screen-body success-body">
+                <div class="success-mark"><svg class="icon"><use href="#i-check" /></svg></div>
+                <p class="micro">Order confirmed</p>
+                <h1 class="success-title">It’s on its way.</h1>
+                <p class="success-copy">Thank you. We’ll pack your pieces with care and send tracking details before they leave the studio.</p>
+                <div class="success-card" id="confirmationCard"></div>
+                <button class="btn btn--solid btn--wide" type="button" data-goto="orders">Track your order</button>
+                <button class="text-link text-link--center" type="button" data-goto="home">Continue shopping</button>
+              </div>
+            </section>
+
+            <!-- ================= ACCOUNT ================= -->
+            <section class="screen" id="screen-account" data-screen="account" aria-label="Account" tabindex="-1">
+              <header class="screen-head">
+                <div><p class="micro">Your space</p><h1 class="screen-title">Account</h1></div>
+                <button class="icon-btn" type="button" id="settingsBtn" aria-label="Settings"><svg class="icon"><use href="#i-sparkle" /></svg></button>
+              </header>
+              <div class="screen-body" id="accountBody"></div>
+              <nav class="tabbar" data-tabbar aria-label="Primary"></nav>
+            </section>
+
+            <!-- ================= ORDERS ================= -->
+            <section class="screen" id="screen-orders" data-screen="orders" aria-label="Your orders" tabindex="-1">
+              <header class="screen-head">
+                <button class="icon-btn" type="button" data-back aria-label="Back"><svg class="icon"><use href="#i-arrow-left" /></svg></button>
+                <div><p class="micro">Purchase history</p><h1 class="screen-title">Your orders</h1></div>
+              </header>
+              <div class="screen-body" id="ordersBody"></div>
+            </section>
+
+            <!-- ================= ORDER DETAIL ================= -->
+            <section class="screen" id="screen-orderDetail" data-screen="orderDetail" aria-label="Order detail" tabindex="-1">
+              <header class="screen-head">
+                <button class="icon-btn" type="button" data-back aria-label="Back"><svg class="icon"><use href="#i-arrow-left" /></svg></button>
+                <div><p class="micro">Order detail</p><h1 class="screen-title" id="orderDetailTitle">Order</h1></div>
+              </header>
+              <div class="screen-body" id="orderDetailBody"></div>
+            </section>
+
+            <!-- ================= WISHLIST ================= -->
+            <section class="screen" id="screen-wishlist" data-screen="wishlist" aria-label="Saved items" tabindex="-1">
+              <header class="screen-head">
+                <div><p class="micro">Kept for later</p><h1 class="screen-title">Saved <span class="count-badge" id="savedCountHead">2</span></h1></div>
+                <button class="icon-btn" type="button" data-goto="listing" aria-label="Find more objects"><svg class="icon"><use href="#i-plus" /></svg></button>
+              </header>
+              <div class="screen-body" id="wishlistBody"></div>
+              <nav class="tabbar" data-tabbar aria-label="Primary"></nav>
+            </section>
+          </div>
+
+          <div class="home-indicator" aria-hidden="true"></div>
+          <div class="sheet-backdrop" id="sheetBackdrop"></div>
+          <div class="sheet" id="filterSheet" role="dialog" aria-modal="true" aria-labelledby="filterTitle" aria-hidden="true">
+            <div class="sheet-handle" aria-hidden="true"></div>
+            <div class="sheet-head">
+              <h2 id="filterTitle">Refine the collection</h2>
+              <button class="icon-btn" type="button" id="closeFilters" aria-label="Close filters"><svg class="icon"><use href="#i-close" /></svg></button>
+            </div>
+            <div class="sheet-content">
+              <div class="filter-group"><p class="micro">Price</p><div class="chip-row chip-row--wrap" id="priceFilters">
+                <button class="chip is-active" type="button" data-filter-group="price" data-filter-value="All">All prices</button>
+                <button class="chip" type="button" data-filter-group="price" data-filter-value="under2000">Under ₹2,000</button>
+                <button class="chip" type="button" data-filter-group="price" data-filter-value="2000to5000">₹2,000 – ₹5,000</button>
+                <button class="chip" type="button" data-filter-group="price" data-filter-value="over5000">Over ₹5,000</button>
+              </div></div>
+              <div class="filter-group"><p class="micro">Rating</p><div class="chip-row chip-row--wrap" id="ratingFilters">
+                <button class="chip" type="button" data-filter-group="rating" data-filter-value="4.5">4.5 ★ and above</button>
+                <button class="chip" type="button" data-filter-group="rating" data-filter-value="4.8">4.8 ★ and above</button>
+              </div></div>
+              <div class="filter-group"><p class="micro">Availability</p><label class="check-row"><input type="checkbox" id="inStockOnly" /> <span>Show only in-stock pieces</span></label></div>
+            </div>
+            <div class="sheet-actions">
+              <button class="btn btn--ghost" id="resetFilters" type="button">Reset</button>
+              <button class="btn btn--solid" id="applyFilters" type="button">Show <span id="filterCount">16</span> objects</button>
+            </div>
+          </div>
+          <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+      <p class="phone-caption">Live prototype · 390 × 844 · Click, tap and scroll</p>
+    </div>
+
+    <aside class="rail rail-right" aria-label="Screen index and design system">
+      <div class="rail-card">
+        <div class="rail-head"><p class="micro">Screen index</p><span>12</span></div>
+        <div class="screen-index" id="screenIndex">
+          <button type="button" data-screen-link="home"><i>01</i>Discover</button>
+          <button type="button" data-screen-link="listing"><i>02</i>Shop / listing</button>
+          <button type="button" data-screen-link="search"><i>03</i>Search</button>
+          <button type="button" data-screen-link="product"><i>04</i>Product detail</button>
+          <button type="button" data-screen-link="cart"><i>05</i>Bag</button>
+          <button type="button" data-screen-link="checkout"><i>06</i>Delivery</button>
+          <button type="button" data-screen-link="payment"><i>07</i>Payment</button>
+          <button type="button" data-screen-link="confirmation"><i>08</i>Order confirmed</button>
+          <button type="button" data-screen-link="account"><i>09</i>Account</button>
+          <button type="button" data-screen-link="orders"><i>10</i>Your orders</button>
+          <button type="button" data-screen-link="orderDetail"><i>11</i>Order detail</button>
+          <button type="button" data-screen-link="wishlist"><i>12</i>Saved items</button>
+        </div>
+      </div>
+      <div class="rail-card" id="design-system">
+        <div class="rail-head"><p class="micro">Design system</p><span>01</span></div>
+        <div class="token-row" aria-label="Colour tokens">
+          <span style="--c:#f7f4ee"><i></i>Ivory</span>
+          <span style="--c:#1d1a16"><i></i>Ink</span>
+          <span style="--c:#b45c39"><i></i>Clay</span>
+          <span style="--c:#e9e1d4"><i></i>Sand</span>
+          <span style="--c:#5d6553"><i></i>Olive</span>
+        </div>
+        <div class="type-sample"><span>Instrument Serif</span><b>Aa</b><small>Display / italic</small></div>
+        <div class="type-sample type-sample--sans"><span>DM Sans</span><b>Aa</b><small>UI / 400–700</small></div>
+        <div class="component-row" aria-label="Reusable components">
+          <span class="mini-chip">Chip</span><span class="mini-btn">Button</span><span class="mini-pill">Pill</span>
+        </div>
+      </div>
+      <div class="rail-card rail-tip">
+        <p class="micro">Prototype notes</p>
+        <p>Bag, saved items, orders and recent searches persist in your browser. Reset restores the demo at any time.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-foot">
+    <span>FORMA — E-Commerce App Prototype</span>
+    <span>Task 05 · Interactive Prototypes · Usability Testing</span>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

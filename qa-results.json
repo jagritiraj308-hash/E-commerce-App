@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-22T12:12:26.925Z",
+  "passed": 14,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Page loads with no JS errors",
+      "status": "pass",
+      "detail": "0 console errors, 0 page errors"
+    },
+    {
+      "name": "12 high-fidelity screens are present",
+      "status": "pass",
+      "detail": "12 screens"
+    },
+    {
+      "name": "Every screen index button navigates correctly",
+      "status": "pass",
+      "detail": "12/12 screen links"
+    },
+    {
+      "name": "Product images load in the catalogue",
+      "status": "pass",
+      "detail": "16/16 images loaded"
+    },
+    {
+      "name": "Filter, sort and search update the listing",
+      "status": "pass",
+      "detail": "category, sort and in-list search verified"
+    },
+    {
+      "name": "Filter sheet applies price and rating filters",
+      "status": "pass",
+      "detail": "filter sheet verified"
+    },
+    {
+      "name": "Journey 01 — shop to confirmed order",
+      "status": "pass",
+      "detail": "order FM-18514 with promo + express + validation"
+    },
+    {
+      "name": "Journey 02 — search, save and move to bag",
+      "status": "pass",
+      "detail": "cart 0 -> 1"
+    },
+    {
+      "name": "Journey 03 — reorder from order history",
+      "status": "pass",
+      "detail": "cart 1 -> 4"
+    },
+    {
+      "name": "State persists across reload",
+      "status": "pass",
+      "detail": "4 items persisted"
+    },
+    {
+      "name": "Reset restores the demo state",
+      "status": "pass",
+      "detail": "cart 2 · home"
+    },
+    {
+      "name": "No horizontal overflow from 320 to 1440px",
+      "status": "pass",
+      "detail": "1440, 1240, 1024, 980, 900, 760, 390, 320 px"
+    },
+    {
+      "name": "Capture 12 phone screenshots",
+      "status": "pass",
+      "detail": "12 PNGs in assets/screens"
+    },
+    {
+      "name": "Final console/page error check",
+      "status": "pass",
+      "detail": "0 errors after full QA run"
+    }
+  ]
+}

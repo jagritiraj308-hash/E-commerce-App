@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#f7f4ee" />
+<meta name="description" content="FORMA e-commerce UI/UX case study: research, product listing, detail, cart, checkout, interactive prototype and usability evaluation." />
+<title>FORMA — E-Commerce UI/UX Case Study</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d1a16'/%3E%3Cpath d='M16 18h32M16 32h32M16 46h20' stroke='%23f7f4ee' stroke-width='3'/%3E%3Ccircle cx='45' cy='46' r='5' fill='%23b45c39'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+<div class="case">
+  <header class="case-head">
+    <a class="brand" href="index.html"><span class="brand-mark">F</span><span><b>FORMA</b><small>Considered objects</small></span></a>
+    <nav aria-label="Documentation pages">
+      <a href="index.html">Prototype</a>
+      <a href="journeys.html">Journeys</a>
+      <a class="is-active" href="case-study.html">Case study</a>
+    </nav>
+  </header>
+
+  <section class="case-hero">
+    <div class="case-hero-copy">
+      <p class="eyebrow"><span></span>Task 05 · Advanced · UI/UX case study</p>
+      <h1>A smoother path from<br /><em>browsing to belonging.</em></h1>
+      <p class="lede">FORMA is a premium home-objects store designed around a simple belief: a good shop should reduce effort, not add theatre. This case study walks through the research, product design, interaction decisions and usability evaluation behind a complete 12-screen mobile commerce prototype.</p>
+      <div class="hero-cta-row">
+        <a class="btn" href="index.html">Open live prototype <span>→</span></a>
+        <a class="btn btn--ghost" href="journeys.html">View journeys &amp; wireframes</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div><strong>12</strong><span>Screens</span></div>
+      <div><strong>03</strong><span>Journeys</span></div>
+      <div><strong>16</strong><span>Products</span></div>
+      <div><strong>14/14</strong><span>QA checks passed</span></div>
+    </div>
+  </section>
+
+  <nav class="jump" aria-label="Case study sections">
+    <a href="#brief">01 Brief</a>
+    <a href="#catalogue">02 Catalogue</a>
+    <a href="#checkout">03 Cart &amp; checkout</a>
+    <a href="#prototype">04 Prototype</a>
+    <a href="#testing">05 Testing</a>
+    <a href="#system">06 System</a>
+    <a href="#reflection">07 Reflection</a>
+  </nav>
+
+  <main>
+    <!-- 01 Brief -->
+    <section class="case-section" id="brief">
+      <div class="case-heading"><span>01</span><div><h2>Brief &amp; approach</h2><p>Design a complete e-commerce application with an optimized shopping experience.</p></div></div>
+      <div class="brief-grid">
+        <article><h3>Problem</h3><p>Shopping apps often make simple purchases feel complicated: unclear costs, noisy catalogues, repetitive forms and no easy way back to a product you already trusted.</p></article>
+        <article><h3>Role &amp; scope</h3><p>End-to-end UX and UI: research synthesis, journeys, wireframes, product catalog, cart and checkout design, clickable prototype and task-based usability evaluation.</p></article>
+        <article><h3>Constraints</h3><p>Static, self-contained deliverable; no backend; mobile-first 390 × 844 canvas; real product imagery; prototype state persisted locally in the browser.</p></article>
+      </div>
+      <div class="principles">
+        <div><span>01</span><b>Clarity over cleverness</b><p>Plain labels, visible totals and predictable states.</p></div>
+        <div><span>02</span><b>Choice without clutter</b><p>Five categories, focused filters and a short spec list.</p></div>
+        <div><span>03</span><b>Reversible commitment</b><p>Save, revisit and reorder instead of forcing a decision.</p></div>
+        <div><span>04</span><b>One next action</b><p>Every screen leads to a single obvious primary action.</p></div>
+      </div>
+    </section>
+
+    <!-- 02 Catalogue -->
+    <section class="case-section" id="catalogue">
+      <div class="case-heading"><span>02</span><div><h2>Product listing &amp; detail</h2><p>Step 2 — help a shopper compare quickly, then build confidence in one object.</p></div></div>
+      <div class="screen-showcase">
+        <figure><img src="assets/screens/02-listing.png" alt="FORMA product listing screen" /><figcaption>Listing · categories, chips, sort, filter and product grid</figcaption></figure>
+        <figure><img src="assets/screens/04-product.png" alt="FORMA product detail screen" /><figcaption>Detail · gallery, variants, specs, quantity and sticky CTA</figcaption></figure>
+      </div>
+      <div class="decision-grid">
+        <article><span class="decision-tag">Listing</span><h3>Scan before reading</h3><p>Image-led cards carry category, rating, price and saving in a consistent hierarchy. A sticky tool area keeps search, category and sort available while the grid scrolls.</p></article>
+        <article><span class="decision-tag">Filtering</span><h3>Filters that stay out of the way</h3><p>Price, rating and availability live in a bottom sheet. The active chip state, result count and “Show N objects” action make the consequence of a filter explicit before it is applied.</p></article>
+        <article><span class="decision-tag">Detail</span><h3>Answer the real questions</h3><p>Beside the imagery, the detail screen answers: what is it made of, how big is it, how do I care for it and when does it arrive? Variants and quantity sit directly above the add-to-bag action.</p></article>
+        <article><span class="decision-tag">Search</span><h3>Language, not just titles</h3><p>Search matches names, categories, materials and tags, so “linen”, “oak” or “vase” all return useful results. Recent and trending terms remove the blank-page problem.</p></article>
+      </div>
+    </section>
+
+    <!-- 03 Cart + checkout -->
+    <section class="case-section" id="checkout">
+      <div class="case-heading"><span>03</span><div><h2>Cart &amp; checkout flow</h2><p>Step 3 — make the cost, commitment and delivery expectation obvious at every point.</p></div></div>
+      <div class="screen-showcase screen-showcase--three">
+        <figure><img src="assets/screens/05-cart.png" alt="Shopping bag screen" /><figcaption>Bag · lines, promo, totals, free-shipping progress</figcaption></figure>
+        <figure><img src="assets/screens/06-checkout.png" alt="Delivery screen" /><figcaption>Delivery · address, speed, running summary</figcaption></figure>
+        <figure><img src="assets/screens/07-payment.png" alt="Payment screen" /><figcaption>Payment · card/UPI, validation, final total</figcaption></figure>
+      </div>
+      <div class="flow-explain">
+        <div class="flow-step"><span>01</span><b>Bag</b><p>Line items, quantity steppers and removal are direct. The free-shipping bar turns an abstract threshold into a visible goal. Applying <code>FORMA10</code> immediately shows the discount row and recalculates tax.</p></div>
+        <div class="flow-step"><span>02</span><b>Delivery</b><p>Address fields are prefilled for the demo but fully editable. Standard, express and same-day options update the total live. Required fields and formats are checked inline with specific messages.</p></div>
+        <div class="flow-step"><span>03</span><b>Payment</b><p>Card and UPI are the two focused choices. The final total is repeated beside the place-order button, along with a clear note that this is a prototype and no real charge is made.</p></div>
+        <div class="flow-step"><span>04</span><b>Confirmation</b><p>The success screen gives an order ID, payment method, delivery estimate and total, then offers a direct “Track your order” action instead of ending the journey.</p></div>
+      </div>
+      <div class="cost-callout">
+        <div><b>Totals stay honest</b><p>Subtotal → discount → delivery → tax → grand total is shown in the bag and repeated at both checkout steps.</p></div>
+        <div class="formula"><span>Subtotal</span><i>−</i><span>Discount</span><i>+</i><span>Delivery</span><i>+</i><span>Tax</span><i>=</i><b>Grand total</b></div>
+      </div>
+    </section>
+
+    <!-- 04 Prototype -->
+    <section class="case-section" id="prototype">
+      <div class="case-heading"><span>04</span><div><h2>Interactive prototype</h2><p>Step 4 — a clickable, persistent build rather than a set of static mockups.</p></div></div>
+      <div class="journey-cards">
+        <article><span class="journey-index">J01</span><h3>Shop a new arrival</h3><p>Discover → listing → product → bag → delivery → payment → confirmation.</p><a href="index.html">Run in prototype →</a></article>
+        <article><span class="journey-index">J02</span><h3>Search &amp; save</h3><p>Search → live results → product → save → saved items → move to bag.</p><a href="index.html">Run in prototype →</a></article>
+        <article><span class="journey-index">J03</span><h3>Reorder a favourite</h3><p>Account → orders → order detail → reorder → bag.</p><a href="index.html">Run in prototype →</a></article>
+      </div>
+      <div class="interaction-table">
+        <div class="it-row it-head"><div>Capability</div><div>Behaviour in the prototype</div><div>State</div></div>
+        <div class="it-row"><div>Catalogue</div><div>16 products · 5 categories · chips · sort · price/rating/stock filter · search</div><div>Live</div></div>
+        <div class="it-row"><div>Product</div><div>Gallery thumbnails · variants · quantity stepper · save · related products</div><div>Live</div></div>
+        <div class="it-row"><div>Bag</div><div>Quantity · remove · FORMA10 promo · free-shipping threshold · totals</div><div>Live</div></div>
+        <div class="it-row"><div>Checkout</div><div>Address validation · three delivery speeds · card/UPI · order creation</div><div>Live</div></div>
+        <div class="it-row"><div>Account</div><div>Orders · order detail timeline · reorder · saved items</div><div>Live</div></div>
+        <div class="it-row"><div>Persistence</div><div>Bag, saved items, orders, recents, address and promo survive reload; Reset restores demo</div><div>Live</div></div>
+      </div>
+      <div class="prototype-note"><b>Guided journeys</b><p>Selecting a journey in the left rail reveals a coach above the phone. The coach advances as the shopper reaches the next screen or completes the relevant action, making the prototype useful for both demonstration and testing.</p></div>
+    </section>
+
+    <!-- 05 Testing -->
+    <section class="case-section" id="testing">
+      <div class="case-heading"><span>05</span><div><h2>Usability testing &amp; findings</h2><p>Step 5 — task-based evaluation plus heuristic review of the clickable build.</p></div></div>
+      <div class="test-intro">
+        <p>The evaluation combined a task-based walkthrough of five realistic shopping scenarios with a heuristic review of clarity, feedback, error prevention and user control. The goal was directional evidence: could a shopper complete core tasks without confusion, and where did the interface need to change?</p>
+        <div class="method-tags"><span>5 task scenarios</span><span>3 guided journeys</span><span>8 viewport widths</span><span>Playwright automation</span></div>
+      </div>
+      <div class="task-table">
+        <div class="task-row task-head"><div>Task</div><div>Scenario</div><div>Success signal</div><div>Result</div></div>
+        <div class="task-row"><div>T1</div><div>Find a ceramic vase under ₹4,000 and add it to the bag.</div><div>Correct product in bag</div><span class="ok">Pass</span></div>
+        <div class="task-row"><div>T2</div><div>Search for “linen”, save a result and move it to the bag later.</div><div>Saved item → cart</div><span class="ok">Pass</span></div>
+        <div class="task-row"><div>T3</div><div>Apply FORMA10 and explain the new total.</div><div>Discount row + recalculated tax</div><span class="ok">Pass</span></div>
+        <div class="task-row"><div>T4</div><div>Submit an invalid delivery form, correct it, pay by card or UPI.</div><div>Inline errors → order confirmed</div><span class="ok">Pass</span></div>
+        <div class="task-row"><div>T5</div><div>Reorder an item from an earlier order.</div><div>Items restored to bag</div><span class="ok">Pass</span></div>
+      </div>
+      <div class="metric-grid">
+        <div><strong>14/14</strong><span>Automated checks passed</span></div>
+        <div><strong>3/3</strong><span>Guided journeys completed</span></div>
+        <div><strong>12/12</strong><span>Screen links verified</span></div>
+        <div><strong>16/16</strong><span>Product images loaded</span></div>
+        <div><strong>0</strong><span>Console / page errors</span></div>
+        <div><strong>320–1440</strong><span>px tested, no overflow</span></div>
+      </div>
+      <div class="findings">
+        <h3>What the review surfaced — and what changed</h3>
+        <div class="finding-row"><span class="severity sev-mid">Medium</span><div><b>Delivery cost felt like a surprise</b><p>Early concepts only showed delivery at checkout. The final design introduces a free-shipping progress bar in the bag and repeats the delivery line in both checkout summaries.</p></div><span class="iteration">Iteration 02</span></div>
+        <div class="finding-row"><span class="severity sev-mid">Medium</span><div><b>Filter state could be lost while scrolling</b><p>The listing tools are now sticky, active chips are visually explicit, and the result count sits beside the sort control.</p></div><span class="iteration">Iteration 02</span></div>
+        <div class="finding-row"><span class="severity sev-low">Low</span><div><b>Form errors were too generic</b><p>Validation now names the problem: “Enter a 10-digit phone number”, “Use a valid future MM/YY”, “Enter a valid UPI ID”.</p></div><span class="iteration">Iteration 03</span></div>
+        <div class="finding-row"><span class="severity sev-low">Low</span><div><b>Saved items felt like a dead end</b><p>The saved grid now routes through product detail where the piece can be moved to the bag in one action, preserving variant choice.</p></div><span class="iteration">Iteration 03</span></div>
+        <div class="finding-row"><span class="severity sev-low">Low</span><div><b>Presentation shell overflowed on small screens</b><p>The phone canvas scales at 760, 430 and 350px breakpoints. Automated checks confirm no horizontal overflow from 320px to 1440px.</p></div><span class="iteration">Iteration 04</span></div>
+      </div>
+      <details class="qa-details">
+        <summary>View full QA evidence</summary>
+        <p>The complete machine-readable result log is saved as <code>qa-results.json</code> in the project root. It records each check, observed detail and pass/fail status from the final run.</p>
+      </details>
+    </section>
+
+    <!-- 06 System -->
+    <section class="case-section" id="system">
+      <div class="case-heading"><span>06</span><div><h2>Design system</h2><p>A compact token set keeps twelve screens visually coherent and quick to extend.</p></div></div>
+      <div class="system-grid">
+        <div class="palette">
+          <span style="--c:#f7f4ee"><i></i><b>Ivory</b><small>#F7F4EE · canvas</small></span>
+          <span style="--c:#fffdf9"><i></i><b>Paper</b><small>#FFFDF9 · surface</small></span>
+          <span style="--c:#1d1a16"><i></i><b>Ink</b><small>#1D1A16 · text / primary</small></span>
+          <span style="--c:#b45c39"><i></i><b>Clay</b><small>#B45C39 · accent</small></span>
+          <span style="--c:#e9e1d4"><i></i><b>Sand</b><small>#E9E1D4 · neutral</small></span>
+          <span style="--c:#5d6553"><i></i><b>Olive</b><small>#5D6553 · success</small></span>
+        </div>
+        <div class="type-specimen">
+          <div class="serif"><span>Display · Instrument Serif</span><b>Quiet objects,<br /><em>considered living.</em></b><small>Regular / italic · 31–96px</small></div>
+          <div class="sans"><span>UI · DM Sans</span><b>Add to bag · ₹3,499</b><small>400 / 500 / 600 / 700 · 8–14px</small></div>
+        </div>
+        <div class="components-strip">
+          <span class="c-chip">Category chip</span>
+          <span class="c-pill">Bestseller</span>
+          <span class="c-btn">Primary button</span>
+          <span class="c-field">Input field</span>
+          <span class="c-stepper">− 1 +</span>
+          <span class="c-tab">Tab bar</span>
+        </div>
+      </div>
+      <div class="system-notes"><div><b>Spacing</b><p>4px base; 8/12/16/20/24px rhythm. Screens use 20px side gutters.</p></div><div><b>Radii</b><p>10px inputs, 14px cards, 16px sheets, 24–32px hero surfaces.</p></div><div><b>Motion</b><p>Subtle 0.2–0.3s transitions; reduced-motion preference respected.</p></div></div>
+    </section>
+
+    <!-- 07 Reflection -->
+    <section class="case-section" id="reflection">
+      <div class="case-heading"><span>07</span><div><h2>Reflection &amp; next steps</h2><p>What the project demonstrates, and where it would go in a production team.</p></div></div>
+      <div class="reflection-grid">
+        <article><h3>Demonstrated skills</h3><ul><li>UX research synthesis and persona-led framing</li><li>Journey mapping and low-fidelity wireframing</li><li>User-centred information architecture</li><li>E-commerce listing, detail, cart and checkout design</li><li>Interactive prototyping with persistent state</li><li>Task-based usability evaluation and iteration</li></ul></article>
+        <article><h3>Limitations</h3><p>The prototype is front-end only. Payments, inventory, authentication and real order tracking are simulated. Testing was a task-based prototype evaluation rather than a field study with recruited participants, so findings are directional.</p></article>
+        <article><h3>Next steps</h3><ol><li>Run a moderated study with 5–8 target shoppers and capture time-on-task plus SUS.</li><li>Connect catalogue and order APIs, then replace demo persistence with accounts.</li><li>Add address autocomplete, real payment gateway states and live courier tracking.</li><li>Extend the system to tablet and web breakpoints.</li></ol></article>
+      </div>
+      <div class="closing"><span>Takeaway</span><p>The strongest e-commerce experiences are not the ones with the most features. They are the ones that make the next step obvious, the total honest and the way back easy.</p></div>
+    </section>
+  </main>
+
+  <footer class="case-foot"><span>FORMA · E-Commerce App UI/UX · Task 05</span><a href="index.html">Return to prototype →</a></footer>
+</div>
+</body>
+</html>
